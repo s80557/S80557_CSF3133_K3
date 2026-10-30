@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>FSKM-Web Development Workshop</title> <!-- the website title -->
+</head>
+<body>
+	<header>
+        <h1>WEB DEVELOPMENT WORKSHOP</h1>
+        <p></p>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#about">About the Event</a> | 
+        <a href="#schedule">Event Schedule</a> | 
+        <a href="#register">Registration</a>
+    </nav>
+	
+	<main>
+        
+        <!-- about the event -->
+        <section id="about">
+            <h2>About the Event</h2>
+            <p>Join us for an intensive full-day hands-on programming workshop designed to
+			<br>equip students with foundational and practical web development skills.</p>
+            
+            <article>
+                <h3>Instructor: Prof. Ts. Ariyssa Irdina </h3>
+                <p>Prof. Ts. Ariyssa has over 10 years of experience teaching in web development <br> 
+				and will guide students through the coding practices.</p>
+            </article>
+
+            <article>
+                <h3>Activity: Live Coding &amp; Portfolio Project</h3>
+                <p>Participants will work on a real-time hands-on exercise to construct and publish 
+				<br>their personal portfolio landing page by the end of the day.</p>
+            </article>
+        </section>
+		
+		<!-- table schedule -->
+		<section id="schedule">
+            <h2>Event Schedule</h2>
+            <table border='1'>
+				<thead>
+					<tr>
+						<th>Time</th>
+						<th>Activity</th>
+						<th>Venue</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>8.30 - 9.00</td>
+						<td>Participant Registration</td>
+						<td>Auditorium</td>
+					</tr>
+					<tr>
+						<td>9.00 - 10.00</td>
+						<td>Session 1: Introduction to HTML &amp Web Design</td>
+						<td rowspan="3">BYOD 1</td>
+					</tr>
+					<tr>
+						<td>10.00 - 12.00</td>
+						<td>Session 2: Styling with CSS </td>
+					</tr>
+					<tr>
+						<td>12.00 - 1.30</td>
+						<td>Session 3: Javascript Basic </td>
+					</tr>
+					<tr>
+						<td>1.30 - 2.30</td>
+						<td colspan='2'>Lunch Break &amp Solat </td>
+					</tr>
+					<tr>
+						<td>2.30 - 4.30</td>
+						<td>Session 4: Web Development </td>
+						<td>BYOD 1</td>
+					</tr>
+				</tbody>
+			</table>
+        </section>
+		
+		<!-- registration form -->
+		<section id="register">
+            <h2>Registration Form</h2>
+            <form action="register.html" method="post">
+			
+			<p>
+				<label for="fullname">Full Name: </label>
+				<input type="text" id="fullname" name="fullname"> <!-- text box -->
+			</p>
+			<p>
+				<label for="matricno">Matric Number: </label>
+				<input type="text" id="matricno" name="matricno">
+			</p>
+			<p>
+				<label for="email">Email: </label>
+				<input type="email" id="email" name="email">
+			</p>
+			<p>
+				<label>Year of Study</label><br>
+				<input type="radio" id="year1" name="year" value="Year 1"> <!-- radio button -->
+				<label for="year1">Year 1</label><br>
+				
+				<input type="radio" id="year2" name="year" value="Year 2">
+				<label for="year2">Year 2</label><br>
+				
+				<input type="radio" id="year3" name="year" value="Year 3">
+				<label for="year3">Year 3</label><br>
+				
+				<input type="radio" id="year4" name="year" value="Year 4">
+				<label for="year4">Year 4</label>
+			</p>
+			
+			<p> <!-- checkbox -->
+				<label>Session You Want To Join (Select at least 3): </label><br>
+				<input type="checkbox" id="session1" name="sessions" value="html">
+				<label for="session1"> Introduction to HTML &amp Web Design</label><br>
+				
+				<input type="checkbox" id="session2" name="sessions" value="html">
+				<label for="session2"> Styling with CSS</label><br>
+				
+				<input type="checkbox" id="session3" name="sessions" value="html">
+				<label for="session3"> Javascript Basic</label><br>
+				
+				<input type="checkbox" id="session4" name="sessions" value="html">
+				<label for="session4"> Web Development</label><br>
+				
+			</p>
+			
+			<p> <!-- dropdown list to choose course -->
+				<label for="programme">Programme:</label><br>
+				<select id="programme" name="programme">
+					<option value="se">Software Engineering</option>
+					<option value="im">Informatic Maritime</option>
+					<option value="mc">Mobile Computing</option>
+					<option value="css">Cloud Computing Security</option>
+			</p>
+			
+			<p><input type="submit" value="Submit Registration"></p>
+			
+			</form>
+        </section>
+</body>
+<!-- footer -->
+<footer> 
+	<p>Organiser: COMTECH FSKM</p>
+	<p>&copy; COMTECH FSKM. All right reserved.</p>
+</footer>
