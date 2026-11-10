@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Bakery UMT Online Order Page</title>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <div id="header">
+        <h1>Campus Bakery UMT<span> - Freshly Baked Daily on Campus</span></h1>
+    </div>
+	
+    <div id="nav">
+        <a href="#home">Home</a> |
+        <a href="#orderform">Place Order</a> |
+        <a href="#sidebar">Price List</a>
+    </div>
+	
+    <div id="content">
+        <h2>Welcome to Our Bakery</h2>
+        <p>Welcome to <strong>Campus Bakery UMT</strong>! We provide <em>delicious and tasty fresh baked goods</em>.<br>
+        <span>Click <a href="#orderform">here</a> to place your order.</span></p>
+		
+        <div id="formcontainer">
+            <h3>Pre-Order Form</h3>
+            
+            <form id="orderform" oninput="totalPrice.value = (parseInt(cupcakes.value) || 0) * 3 + (parseInt(cakes.value) || 0) * 5">
+                
+                <!-- customer name -->
+                <p>
+                    <label for="fullname">Customer Name:</label><br>
+                    <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required autofocus>
+                </p>
+
+                <!-- phone number -->
+                <p>
+                    <label for="phone">Phone Number:</label><br>
+                    <input type="tel" id="phone" name="phone" placeholder="012-3456789" required>
+                </p>
+
+                <!-- email address -->
+                <p>
+                    <label for="email">E-mail Address:</label><br>
+                    <input type="email" id="email" name="email" placeholder="studentid@ocean.umt.edu.my" required>
+                </p>
+
+                <!-- pick-up date and time -->
+                <p>
+                    <label for="pickupdate">Pick-up Date:</label><br>
+                    <input type="date" id="pickupdate" name="pickupdate" required>
+                </p>
+                <p>
+                    <label for="pickuptime">Pick-up Time:</label><br>
+                    <input type="time" id="pickuptime" name="pickuptime" required>
+                </p>
+				
+                <p>
+                    <label for="flavour">Flavour:</label><br>
+                    <input list="flavours" id="flavour" name="flavour" placeholder="Select flavour">
+                    <datalist id="flavours">
+                        <option value="Chocolate Indulgence">
+                        <option value="Red Velvet Cheese">
+                        <option value="White Chocolate Macadamia">
+                        <option value="Cheese Blueberry">
+                        <option value="Pandan Gula Melaka">
+                    </datalist>
+                </p>
+				
+                <p>
+                    <label for="icing">Icing Colour:</label><br>
+                    <input type="color" id="icing" name="icing">
+                </p>
+				
+                <p>
+                    <label for="sweetness">Sweetness Level:</label><br>
+                    <input type="range" id="sweetness" name="sweetness" min="1" max="5" step="1" value="3">
+                </p>
+				
+                <fieldset>
+                    <legend>Select Quantity</legend>
+                    <p>
+                        <label for="cupcakes">Cupcakes (RM 3.00 each):</label><br>
+                        <input type="number" id="cupcakes" name="cupcakes" min="0" value="0">
+                    </p>
+                    <p>
+                        <label for="cakes">Cake Slices (RM 5.00 each):</label><br>
+                        <input type="number" id="cakes" name="cakes" min="0" value="0">
+                    </p>
+                    <p>
+                        <strong>Total Price: RM </strong>
+                        <output name="totalPrice" for="cupcakes cakes">0</output>
+                    </p>
+                </fieldset>
+
+                <!-- Submit Button -->
+                <p>
+                    <input type="submit" value="Submit Order">
+                </p>
+
+            </form>
+        </div>
+    </div>
+	
+    <div id="sidebar">
+        <h3>Price List</h3>
+        <ul>
+            <li>Cupcake - RM 3.00</li>
+            <li>Cake Slice - RM 5.00</li>
+            <li>Special Offer: Orders &gt; 10 pieces get a free drink!</li>
+        </ul>
+    </div>
+
+    <!-- Footer Section -->
+    <div id="footer">
+        <p>&copy; 2026 CampusBake&reg; Online Order System. All rights reserved.</p>
+    </div>
+
+</body>
+</html>

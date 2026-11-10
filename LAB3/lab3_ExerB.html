@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Ticket Booking</title>
+</head>
+<body>
+<!-- Errors:
+1. Line 1: Missing "html" in DOCTYPE.
+2. Line 7: Wrong body tag. It should be <body>.
+3. Line 9: Wrong order of closing tags.
+4. Line 11: Used <span> instead of <div>.
+5. Line 13: Missing HTML entities for < and &.
+6. Line 14: Wrong calculation. It joins numbers instead of adding them.
+7. Line 18: Wrong input type. Should use type="email".
+8. Line 22: Datalist id does not match the list attribute.
+9. Line 32: Minimum value is greater than maximum value.
+10. Line 33: Unnecessary "for" attribute in output.
+11. Line 38: Wrong copyright entity. Should use &copy;.
+12. Line 41-55: Extra and incorrect closing tags.
+-->
+
+    <!-- Header section -->
+    <div id="header">
+        <h1>e-Ticket <span>Your Campus Cinema</span></h1>
+    </div>
+
+    <!-- Main content and booking form -->
+    <div id="content">
+        <h2>Book Your Ticket</h2>
+        <p>Promotion: tickets &lt; RM10 for students &amp; staff!</p>
+
+        <form action="booking.php" method="post">
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name"
+            placeholder="Enter your name" required><br>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email"
+            placeholder="Enter your e-mail" required><br>
+
+            <!-- Phone number input -->
+            <label for="phone">Phone number:</label>
+            <input type="tel" id="phone" name="phone"
+            placeholder="Enter your phone number" required><br>
+
+            <label for="date">Show date:</label>
+            <input type="date" id="date" name="date" required><br>
+
+            <!-- Show time input -->
+            <label for="time">Show time:</label>
+            <input type="time" id="time" name="time" required><br>
+
+            <label for="movie">Movie:</label>
+            <input type="text" id="movie" name="movie"
+            list="movielist" required>
+
+            <datalist id="movielist">
+                <option value="Space Rangers">
+                <option value="Kampung Comedy">
+                <option value="Ocean Mystery">
+            </datalist><br>
+
+            <!-- Ticket quantity -->
+            <label for="adult">Adult tickets:</label>
+            <input type="number" id="adult" name="adult"
+            value="0" min="0" required><br>
+
+            <label for="child">Child tickets:</label>
+            <input type="number" id="child" name="child"
+            value="0" min="0" required><br>
+
+            <!-- Rating slider -->
+            <label for="rating">Rate our service:</label>
+            <input type="range" id="rating" name="rating"
+            min="1" max="5" value="3"><br>
+
+            <!-- Display total tickets and price -->
+            Total tickets:
+            <output id="total" name="total">0</output><br>
+
+            Total price: RM
+            <output id="price" name="price">0</output><br>
+
+            <input type="submit" value="Book Now">
+
+        </form>
+    </div>
+
+    <!-- Sidebar: Now Showing movies -->
+    <div id="sidebar">
+        <h2>Now Showing</h2>
+
+        <ul>
+            <li>
+                <strong>Space Rangers</strong>
+                <span>PG</span> -
+                <a href="https://www.youtube.com/results?search_query=Space+Rangers+movie+trailer"
+                target="_blank" rel="noopener noreferrer">Watch trailer</a>
+            </li>
+
+            <li>
+                <strong>Kampung Comedy</strong>
+                <span>U</span> -
+                <a href="https://www.youtube.com/results?search_query=Kampung+Comedy+movie+trailer"
+                target="_blank" rel="noopener noreferrer">Watch trailer</a>
+            </li>
+
+            <li>
+                <strong>Ocean Mystery</strong>
+                <span>PG-13</span> -
+                <a href="https://www.youtube.com/results?search_query=Ocean+Mystery+movie+trailer"
+                target="_blank" rel="noopener noreferrer">Watch trailer</a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Footer section -->
+    <div id="footer">
+        <p>&copy; 2026 CineKampus. All rights reserved.</p>
+        <p>e-Ticket&reg; – Campus Cinema &lt; RM10 every Tuesday</p>
+    </div>
+
+    <!-- JavaScript: Calculate total tickets and price -->
+    <script>
+        function updateTotals() {
+
+            const adultTickets =
+            Number(document.getElementById("adult").value) || 0;
+
+            const childTickets =
+            Number(document.getElementById("child").value) || 0;
+
+            document.getElementById("total").value =
+            adultTickets + childTickets;
+
+            document.getElementById("price").value =
+            (adultTickets * 12) + (childTickets * 8);
+        }
+
+        document.getElementById("adult").addEventListener("input", updateTotals);
+        document.getElementById("child").addEventListener("input", updateTotals);
+    </script>
+
+</body>
+</html>
