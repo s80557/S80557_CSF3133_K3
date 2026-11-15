@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-Cafe Campus</title>
+    <!-- External CSS -->
+    <link rel="stylesheet" type="text/css" href="cafe.css">
+    <style>
+        a:link {color: #1A5276;}
+        a:visited {color: #7D3C98;}
+        a:hover {color: #E67E22;}
+        a:active {color: #C0392B;}
+        h1 {text-decoration: overline;}
+        p {color: #333333; text-align: justify;}
+        .intro {
+            font-size: 18px;
+            background-color: #FDEBD0;
+        }
+        .highlight {
+            font-weight: bold;
+            color: #C0392B;
+        }
+    </style>
+</head>
+<body>
+	<!-- Error 1: Wrong comment format in CSS. -->
+	<!-- Error 2: Changed 'no' to 'none'. -->
+	<!-- Error 3: Put link states in the correct order. -->
+	<!-- Error 4: Changed 'overlined' to 'overline'. -->
+	<!-- Error 5: Added missing colon after color. -->
+	<!-- Error 6: Changed #intro to .intro. -->
+	<!-- Error 7: Added missing dot before highlight. -->
+	<!-- Error 8: Added # in href="#menu". -->
+	<!-- Error 9: Changed duplicate IDs to class="item". -->
+	<!-- Error 10: Added controls and corrected the video type. -->
+    <!-- Header section -->
+    <header>
+        <h1>e-Cafe Campus</h1>
+    </header>
+
+    <!-- Navigation bar -->
+    <nav>
+        <ul>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#video">Video</a></li>
+            <li><a href="#feedback">Feedback</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Menu section -->
+    <section id="menu">
+        <h2>Today's Menu</h2>
+        <p class="intro">Freshly brewed coffee and local delights every day.</p>
+        <article class="item">
+            <h3>Kopi Tarik</h3>
+            <p>Only <span class="old-price">RM 4.50</span> <span class="highlight">RM 3.50</span></p>
+        </article>
+        <article class="item">
+            <h3>Nasi Lemak</h3>
+            <p>Only <span class="old-price">RM 6.50</span> <span class="highlight">RM 5.00</span></p>
+        </article>
+        <article class="item">
+            <h3>Teh Ais Cincau</h3>
+            <p>Only <span class="old-price">RM 5.00</span> <span class="highlight">RM 4.00</span></p>
+        </article>
+    </section>
+
+    <!-- Video section -->
+    <section id="video">
+        <h2>Watch Our Story</h2>
+        <figure>
+            <video width="400" height="300" controls>
+                <source src="cafe.mp4" type="video/mp4">
+            </video>
+            <figcaption>A behind the scenes look at how we brew fresh coffee daily at e-Café Campus.</figcaption>
+        </figure>
+    </section>
+
+    <!-- Feedback form section -->
+    <section id="feedback">
+        <h2>Customer Feedback</h2>
+        <form class="feedback-form" action="#" method="post">
+            <p>
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required>
+            </p>
+            <p>
+                <label for="email">E-mail:</label><br>
+                <input type="email" id="email" name="email" required>
+            </p>
+            <p>
+                Visit type:<br>
+                <input type="radio" id="dinein" name="visit_type" value="Dine-in" checked>
+                <label for="dinein">Dine-in</label>
+                <input type="radio" id="takeaway" name="visit_type" value="Take-away">
+                <label for="takeaway">Take-away</label>
+            </p>
+            <p>
+                Favourite items:<br>
+                <input type="checkbox" id="fav_kopi" name="favourites[]" value="Kopi Tarik">
+                <label for="fav_kopi">Kopi Tarik</label><br>
+                <input type="checkbox" id="fav_nasi" name="favourites[]" value="Nasi Lemak">
+                <label for="fav_nasi">Nasi Lemak</label><br>
+                <input type="checkbox" id="fav_teh" name="favourites[]" value="Teh Ais Cincau">
+                <label for="fav_teh">Teh Ais Cincau</label>
+            </p>
+            <p>
+                <button type="submit">Submit</button>
+            </p>
+        </form>
+    </section>
+
+    <!-- Footer-->
+    <footer id="contact">
+        <address>
+            Contact us at: <a href="mailto:ecafe@campus.edu.my">ecafe@campus.edu.my</a>
+        </address>
+        <p>&copy; 2026 e-Cafe Campus</p>
+    </footer>
+</body>
+</html>

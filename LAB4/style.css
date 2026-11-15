@@ -1,0 +1,179 @@
+body {
+    margin: 0;
+    background-color: #f2f8fc;
+    color: #222;
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+header {
+    background-color: #087e8b;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+h1 {
+    text-decoration: overline;
+}
+
+h2 {
+    color: #087e8b;
+    text-decoration: underline;
+    text-align: center;
+}
+
+/* Navigation bar */
+nav {
+    background-color: #064b60;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    text-transform: uppercase;
+}
+
+/* Navigation hover */
+nav a:hover {
+    background-color: #16a6a1;
+}
+
+/* Link */
+a:link {
+    color: #ffffff;
+}
+
+a:visited {
+    color: #d8d8ff;
+}
+
+a:hover {
+    color: #ffe066;
+}
+
+a:active {
+    color: #ff6b6b;
+}
+
+/* Sections */
+section {
+    width: 90%;
+    margin: 25px auto;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+}
+
+/* Destination cards */
+.card {
+    background-color: #e8f5f5;
+    padding: 15px;
+    margin: 15px 0;
+    border: 1px solid #9acaca;
+    border-radius: 6px;
+}
+
+.card h3 {
+    color: #064b60;
+}
+
+/* Old price */
+.old-price {
+    text-decoration: line-through;
+    color: #777777;
+    margin-right: 10px;
+}
+
+/* Video */
+figure {
+    text-align: center;
+}
+
+video {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+}
+
+.caption {
+    font-size: 14px;
+    color: #555555;
+}
+
+/* Trip form */
+.trip-form {
+    width: 90%;
+    max-width: 500px;
+    margin: 15px auto;
+    padding: 20px;
+    background-color: #e8f5f5;
+    border: 1px solid #087e8b;
+    border-radius: 8px;
+}
+
+.trip-form input[type="text"],
+.trip-form input[type="email"] {
+    display: block;
+    width: 95%;
+    padding: 8px;
+    margin: 5px 0 15px;
+    border: 1px solid #999999;
+}
+
+/* Submit button */
+button {
+    background-color: #087e8b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #064b60;
+}
+
+/* Footer */
+footer {
+    background-color: #064b60;
+    color: white;
+    padding: 20px;
+}
+
+footer a {
+    color: white;
+}
+
+/* Responsive design */
+@media screen and (max-width: 600px) {
+
+    nav ul {
+        flex-direction: column;
+        gap: 5px;
+        text-align: center;
+    }
+
+    section {
+        width: 90%;
+        padding: 12px;
+        box-sizing: border-box;
+    }
+
+    .trip-form {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
