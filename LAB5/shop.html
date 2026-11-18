@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Bookstore</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="shop.css">
+    <style>
+        h1 { text-align: center; }
+    </style>
+</head>
+<body>
+
+<!--
+    Error 1: Wrong rel value; changed "stylesheets" to "stylesheet".
+    Error 2: <style> was in the wrong place; moved it to <head>.
+    Error 3: Wrong CSS symbol; changed '=' to ':'.
+    Error 4: Wrong table ID; changed "product" to "products".
+    Error 5: Wrong font name; changed "Robotto" to "Roboto".
+    Error 6: Wrong background value; changed "no repeat" to "no-repeat".
+    Error 7: Wrong property name; changed "bacground-position" to "background-position".
+    Error 8: Wrong display value; changed "inline" to "block".
+    Error 9: Wrong hover syntax; changed "li:a:hover" to "li a:hover".
+    Error 10: Wrong row selector; changed it to "nth-child(even)".
+    Error 11: Wrong hover selector; changed "hovered" to "hover".
+    Error 12: Missing semicolon after background-color.
+-->
+
+    <header>
+        <h1>Campus Bookstore</h1>
+        <p>Textbooks, stationery and more for every student.</p>
+    </header>
+
+    <!-- nav and .active class on home -->
+    <nav>
+        <ul>
+            <li><a class="active" href="#home">Home</a></li>
+            <li><a href="#books">Books</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- main container -->
+    <main>
+        <section id="books">
+            <h2>Available Items</h2>
+            <p>Browse our current semester stock below. Show your student matric card at the counter to enjoy exclusive campus discounts on selected textbooks and stationery.</p>
+
+            <table id="products">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Category</th>
+                        <th class="price">Price (RM)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Web Design Basics</td>
+                        <td>Textbook</td>
+                        <td class="price">45.00</td>
+                    </tr>
+                    <tr>
+                        <td>A4 Notebook</td>
+                        <td>Stationery</td>
+                        <td class="price">6.50</td>
+                    </tr>
+                    <tr>
+                        <td>USB Drive 32GB</td>
+                        <td>Gadget</td>
+                        <td class="price">25.00</td>
+                    </tr>
+                    <tr>
+                        <td>Highlighter Set</td>
+                        <td>Stationery</td>
+                        <td class="price">9.90</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <!-- footer -->
+    <footer id="contact">
+        &copy; 2026 Campus Bookstore
+    </footer>
+
+</body>
+</html>
